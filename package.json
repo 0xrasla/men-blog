@@ -1,0 +1,22 @@
+{
+  "name": "express-tuts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node ./bin/www",
+    "watch": "nodemon --ignore public"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "livereload": "^0.9.3",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.13.7",
+    "slugify": "^1.6.0"
+  }
+}

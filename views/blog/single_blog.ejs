@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Ultimate Blog - <%= blog.title %></title>
+  </head>
+  <body>
+    <%- include("../navebar") %>
+    <div class="single-blog">
+      <h1><%= blog.title %></h1>
+      <h4>Created By : <%- blog.author %></h4>
+      <p><%= blog.date.toLocaleDateString() %></p>
+      <article><%- blog.content %></article>
+      <div class="links">
+        <a href="/blogs/all">All Articles</a>
+        <a href="/blogs/edit/<%= blog.id %> ">Edit</a>
+      </div>
+    </div>
+  </body>
+</html>

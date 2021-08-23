@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Blogs</title>
+  </head>
+  <body>
+    <%- include("../navebar") %>
+    <div class="_blog">
+      <%if (blogs.length === 0) { %>
+      <h1>No Posts to Show....</h1>
+      <% } %> <%blogs.forEach(e => { %>
+      <div class="card">
+        <h1><p><%= e.title %></p></h1>
+        <p style="color: grey"><%= e.author %></p>
+        <p><%= e.date.toLocaleDateString() %></p>
+        <span class="sep-links">
+          <span> <a href="/blogs/<%= e.slug %> ">View</a> </span>
+          <form action="/blogs/<%= e.id %> >?_method=DELETE" method="post">
+            <button type="submit">Delete</button>
+          </form>
+        </span>
+      </div>
+      <% })%>
+    </div>
+  </body>
+</html>
