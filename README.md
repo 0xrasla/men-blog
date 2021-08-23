@@ -7,7 +7,7 @@
 ## Instructions
 * **__Make sure to install mongodb on your system__**
 * **__run "npm i" to install dependencies__**
-* **__"run npm run devStart" to run the server__**
+* **__run "npm run devStart" to run the server__**
 
 # **Website**
 
